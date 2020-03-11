@@ -8,7 +8,7 @@ pub struct BitRef<'a> {
     phantom: PhantomData<&'a u8>,
 }
 
-// Caches value until and writes on Drop.
+// Caches value and writes on Drop.
 #[derive(Debug, PartialEq, Eq)]
 pub struct BitMut<'a> {
     bit: bool,
